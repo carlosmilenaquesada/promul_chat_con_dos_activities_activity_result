@@ -4,7 +4,7 @@ plugins {
 
 android {
     namespace = "com.example.promul_chat_con_dos_activities_activity_result"
-    compileSdk = 33
+    compileSdk = 34
 
     defaultConfig {
         applicationId = "com.example.promul_chat_con_dos_activities_activity_result"
