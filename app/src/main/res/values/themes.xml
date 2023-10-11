@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Base.Theme.Promul_chat_con_dos_activities_activity_result" parent="Theme.Material3.Dark.Dialog">
+    <style name="Base.Theme.Promul_chat_con_dos_activities_activity_result" parent="Theme.Material3.DayNight">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
