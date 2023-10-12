@@ -1,5 +1,9 @@
 package com.example.promul_chat_con_dos_activities_activity_result;
 
+import androidx.activity.result.ActivityResult;
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -19,6 +23,10 @@ public class MainActivity extends AppCompatActivity {
 
     private static int ID_PETICION = 1;
 
+    /*
+     * 1º Hay que configurar en el manifest que MainActivity es la ventana padre y SecondActivity es
+     * la ventana hijo, para poder establecer una conversación a través del result.
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,12 +35,14 @@ public class MainActivity extends AppCompatActivity {
         textoChatMain = (TextView) findViewById(R.id.textoChatMain);
         mensajeAEnviarPorMain = (EditText) findViewById(R.id.mensajeAEnviarPorMain);
         enviarMain = (Button) findViewById(R.id.enviarMain);
-    }
 
-    /*
-     * 1º Hay que configurar en el manifest que MainActivity es la ventana padre y SecondActivity es
-     * la ventana hijo, para poder establecer una conversación a través del result.
-     */
+        enviarMain.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                enviarMensajePorMain();
+            }
+        });
+    }
 
     /*
      * 2º Creamos el método de enviar de main a second, donde iniciamos un ActivityForResult que
@@ -41,12 +51,13 @@ public class MainActivity extends AppCompatActivity {
      * Este proceso (el startActivityForResult()) abrirá una vía de comunicación a través del Result
      * en lugar de intercambiar directamente intent (como ocurría con startActivity()) entre main y second.
      */
-    public void enviarMensajePorMain(View view) {
+    public void enviarMensajePorMain() {
         String mensaje = String.valueOf(mensajeAEnviarPorMain.getText());
         Intent intent = new Intent(this, SecondActivity.class);
         intent.putExtra(ENVIADO_POR_MAIN, mensaje);
         startActivityForResult(intent, ID_PETICION);
     }
+
 
     /*
      * 5º Por último, para que main pueda recibir la información del intent del hijo second a través
@@ -65,4 +76,69 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
+
+    /*
+     *   ARREGLAR DEPRECATED DE startActivityForResult()
+     *   -  Aunque no se arregle, el código funciona, pero da el aviso de deprecated y en el futuro
+     *      podría dejar de funcionar.
+     *   -  Para arreglarlo:
+     *
+     *      1º Sustituimos el antiguo método public void enviarMensajePorMain() por el siguiente código:
+     *
+        *ActivityResultLauncher<Intent> enviarMensajePorMainLauncher = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), new ActivityResultCallback<ActivityResult>() {
+        @Override
+        public void onActivityResult(ActivityResult o) {
+            if (o.getResultCode() == RESULT_OK) {
+                Intent data = o.getData();
+                textoChatMain.setText((String) data.getStringExtra(SecondActivity.ENVIADO_POR_SECOND));
+            }
+        }
+        });
+        *
+        * 2º En lugar de llamar a startActivityForResult(intent, ID_PETICION) que está deprecated,
+        * llamamos a enviarMensajePorMainLauncher.launch(intent)
+        *
+        * 3º Listo. Como podemos ver, ya no hay que usar el ID_PETICION ni el setVisibility.
+     *
+     *  */
+
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

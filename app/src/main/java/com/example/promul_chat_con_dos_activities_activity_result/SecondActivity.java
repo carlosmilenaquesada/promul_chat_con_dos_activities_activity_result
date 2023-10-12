@@ -22,6 +22,12 @@ public class SecondActivity extends AppCompatActivity {
         textoChatsecond = (TextView) findViewById(R.id.textoChatSecond);
         mensajeAEnviarPorSecond = (EditText) findViewById(R.id.mensajeAEnviarPorSecond);
         enviarSecond = (Button) findViewById(R.id.enviarSecond);
+        enviarSecond.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                enviarMensajePorSecond();
+            }
+        });
 
         /*
          * 3º Recibimos el intent como haríamos normalmente.
@@ -30,7 +36,7 @@ public class SecondActivity extends AppCompatActivity {
         textoChatsecond.setText(intent.getStringExtra(MainActivity.ENVIADO_POR_MAIN));
     }
 
-    public void enviarMensajePorSecond(View view) {
+    public void enviarMensajePorSecond() {
         String mensaje = String.valueOf(mensajeAEnviarPorSecond.getText());
         Intent intent = new Intent(this, SecondActivity.class);
         intent.putExtra(ENVIADO_POR_SECOND, mensaje);

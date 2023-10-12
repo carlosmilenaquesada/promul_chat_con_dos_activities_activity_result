@@ -3,7 +3,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <string name="app_name">promul_chat_con_dos_activities_activity_result</string>
-    <style name="Base.Theme.Promul_chat_con_dos_activities_activity_result" parent="Theme.Material3.DayNight">
+    <style name="Base.Theme.Promul_chat_con_dos_activities_activity_result" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         
         
     </style>

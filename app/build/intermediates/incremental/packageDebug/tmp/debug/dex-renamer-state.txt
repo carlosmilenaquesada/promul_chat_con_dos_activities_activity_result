@@ -1,4 +1,4 @@
-#Wed Oct 11 13:06:48 CEST 2023
+#Thu Oct 12 14:46:54 CEST 2023
 base.0=C\:\\Users\\Administrador\\Desktop\\PM\\promul_chat_con_dos_activities_activity_result\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
 base.1=C\:\\Users\\Administrador\\Desktop\\PM\\promul_chat_con_dos_activities_activity_result\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
 base.2=C\:\\Users\\Administrador\\Desktop\\PM\\promul_chat_con_dos_activities_activity_result\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\6\\classes.dex

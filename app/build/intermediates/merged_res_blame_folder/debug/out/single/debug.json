@@ -28,20 +28,24 @@
         "source": "C:\\Users\\Administrador\\.gradle\\daemon\\8.0\\com.example.promul_chat_con_dos_activities_activity_result.app-main-33:\\drawable\\ic_launcher_foreground.xml"
     },
     {
-        "merged": "com.example.promul_chat_con_dos_activities_activity_result.app-merged_res-31:/layout_activity_main.xml.flat",
-        "source": "com.example.promul_chat_con_dos_activities_activity_result.app-main-33:/layout/activity_main.xml"
-    },
-    {
-        "merged": "C:\\Users\\Administrador\\.gradle\\daemon\\8.0\\com.example.promul_chat_con_dos_activities_activity_result.app-merged_res-31:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
-        "source": "C:\\Users\\Administrador\\.gradle\\daemon\\8.0\\com.example.promul_chat_con_dos_activities_activity_result.app-main-33:\\mipmap-xxxhdpi\\ic_launcher.webp"
+        "merged": "com.example.promul_chat_con_dos_activities_activity_result.app-merged_res-31:/layout_activity_second.xml.flat",
+        "source": "com.example.promul_chat_con_dos_activities_activity_result.app-main-33:/layout/activity_second.xml"
     },
     {
         "merged": "C:\\Users\\Administrador\\.gradle\\daemon\\8.0\\com.example.promul_chat_con_dos_activities_activity_result.app-merged_res-31:\\layout_activity_main.xml.flat",
         "source": "C:\\Users\\Administrador\\.gradle\\daemon\\8.0\\com.example.promul_chat_con_dos_activities_activity_result.app-main-33:\\layout\\activity_main.xml"
     },
     {
+        "merged": "C:\\Users\\Administrador\\.gradle\\daemon\\8.0\\com.example.promul_chat_con_dos_activities_activity_result.app-merged_res-31:\\mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "C:\\Users\\Administrador\\.gradle\\daemon\\8.0\\com.example.promul_chat_con_dos_activities_activity_result.app-main-33:\\mipmap-xxxhdpi\\ic_launcher.webp"
+    },
+    {
         "merged": "C:\\Users\\Administrador\\.gradle\\daemon\\8.0\\com.example.promul_chat_con_dos_activities_activity_result.app-merged_res-31:\\mipmap-xhdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\Administrador\\.gradle\\daemon\\8.0\\com.example.promul_chat_con_dos_activities_activity_result.app-main-33:\\mipmap-xhdpi\\ic_launcher.webp"
+    },
+    {
+        "merged": "C:\\Users\\Administrador\\.gradle\\daemon\\8.0\\com.example.promul_chat_con_dos_activities_activity_result.app-merged_res-31:\\layout_activity_second.xml.flat",
+        "source": "C:\\Users\\Administrador\\.gradle\\daemon\\8.0\\com.example.promul_chat_con_dos_activities_activity_result.app-main-33:\\layout\\activity_second.xml"
     },
     {
         "merged": "C:\\Users\\Administrador\\.gradle\\daemon\\8.0\\com.example.promul_chat_con_dos_activities_activity_result.app-merged_res-31:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",

@@ -28,6 +28,9 @@
         android:testOnly="true"
         android:theme="@style/Theme.Promul_chat_con_dos_activities_activity_result" >
         <activity
+            android:name="com.example.promul_chat_con_dos_activities_activity_result.SecondActivity"
+            android:exported="false" />
+        <activity
             android:name="com.example.promul_chat_con_dos_activities_activity_result.MainActivity"
             android:exported="true" >
             <intent-filter>
