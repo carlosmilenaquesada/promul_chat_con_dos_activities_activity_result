@@ -19,16 +19,28 @@ public class SecondActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
-
-        textoChatsecond = (TextView)  findViewById(R.id.textoChatSecond);
+        textoChatsecond = (TextView) findViewById(R.id.textoChatSecond);
         mensajeAEnviarPorSecond = (EditText) findViewById(R.id.mensajeAEnviarPorSecond);
         enviarSecond = (Button) findViewById(R.id.enviarSecond);
+
+        /*
+         * 3º Recibimos el intent como haríamos normalmente.
+         */
+        Intent intent = getIntent();
+        textoChatsecond.setText(intent.getStringExtra(MainActivity.ENVIADO_POR_MAIN));
     }
 
-    public void enviarMensaje(View view){
+    public void enviarMensajePorSecond(View view) {
         String mensaje = String.valueOf(mensajeAEnviarPorSecond.getText());
         Intent intent = new Intent(this, SecondActivity.class);
         intent.putExtra(ENVIADO_POR_SECOND, mensaje);
-        startActivity(intent);
+
+        /*
+         * 4º En el proceso de responder por parte de second, en lugar de contestar con un starActivity,
+         *  lo hacemos utilizando la vía del Result, enviando a través de éste un intent de respuesta.
+         *  Hay que finalizar (finish) la ventana actual second para que se muestre la ventana padre main.
+         */
+        setResult(RESULT_OK, intent);
+        finish();
     }
 }
